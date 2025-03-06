@@ -1,6 +1,6 @@
 # product_size_color_selector
 
-A Flutter package for selecting colors and sizes in a user-friendly way.
+This is a Flutter package that provides a user-friendly way for users to select colors and sizes. It allows users to pick from a predefined list of colors and sizes, and provides a callback mechanism to handle the selection. The package also handles edge cases like empty color and size lists gracefully.
 
 ![img.png](img.png)
 
