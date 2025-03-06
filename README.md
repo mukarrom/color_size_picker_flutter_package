@@ -2,6 +2,8 @@
 
 A Flutter package for selecting colors and sizes in a user-friendly way.
 
+![img.png](img.png)
+
 ## Features
 
 - Allows users to pick colors from a predefined list.
