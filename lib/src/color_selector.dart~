@@ -45,10 +45,10 @@ class _ColorSelectorState extends State<ColorSelector> {
           border: Border.all(
             color: entry.value == Colors.white
                 ? AppColors.themeColor
-                : Colors.transparent,
-            // : _selectedColor == entry.value
-            //     ? Colors.black
-            //     : Colors.transparent,
+            : Colors.transparent,
+                // : _selectedColor == entry.value
+                //     ? Colors.black
+                //     : Colors.transparent,
             width: _selectedColor == entry.value ? 2.0 : 0.0,
           ),
         ),

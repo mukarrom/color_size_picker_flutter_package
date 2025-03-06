@@ -1,4 +1,4 @@
-name: product_size_color_selector
+name: product_color_size_selector
 description: A Flutter package for selecting colors and sizes in a user-friendly way.
 version: 1.0.0
 homepage: https://github.com/mukarrom/color_size_picker_flutter_package
