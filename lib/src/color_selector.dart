@@ -1,8 +1,8 @@
 import 'package:color_size_picker/src/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class ColorPickerWidget extends StatefulWidget {
-  const ColorPickerWidget({
+class ColorSelector extends StatefulWidget {
+  const ColorSelector({
     super.key,
     this.colors = const ["Green", "Red", "Blue", "Yellow"],
     this.onChangeColor,
@@ -12,10 +12,10 @@ class ColorPickerWidget extends StatefulWidget {
   final void Function(String)? onChangeColor;
 
   @override
-  State<ColorPickerWidget> createState() => _ColorPickerWidgetState();
+  State<ColorSelector> createState() => _ColorSelectorState();
 }
 
-class _ColorPickerWidgetState extends State<ColorPickerWidget> {
+class _ColorSelectorState extends State<ColorSelector> {
   late Color _selectedColor;
   final Map<String, Color> _colors = {};
 

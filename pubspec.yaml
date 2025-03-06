@@ -1,6 +1,6 @@
 name: color_size_picker
-description: A package for picking colors and sizes in Flutter.
-version: 0.0.1
+description: A Flutter package for selecting colors and sizes in a user-friendly way.
+version: 1.0.0
 homepage: https://github.com/mukarrom/color_size_picker_flutter_package
 repository: https://github.com/mukarrom/color_size_picker_flutter_package
 license: MIT
