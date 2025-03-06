@@ -1,7 +1,7 @@
 name: color_size_picker
 description: "A new Flutter package."
 version: 0.0.1
-homepage:
+homepage: https://github.com/mukarrom/color_size_picker_flutter_package
 
 environment:
   sdk: ^3.6.0
