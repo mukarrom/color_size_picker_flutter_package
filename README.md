@@ -53,6 +53,14 @@ SizeSelector(
   },
 ),
 ```
+## Properties
+
+- `colors`: A list of colors to display in the color selector.
+- `sizes`: A list of sizes to display in the size selector.
+- `onChangeColor`: A callback function that is called when a color is selected.
+- `onChangeSize`: A callback function that is called when a size is selected.
+- `backgroundColor`: The background color of the color selector and size selector. Default is `Colors.indigo`.
+- `borderColor`: The border color of the color selector and size selector. Default is `Colors.black`.
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.

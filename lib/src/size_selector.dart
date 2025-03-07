@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:product_size_color_selector/src/app_colors.dart';
 
 class SizeSelector extends StatefulWidget {
-  const SizeSelector({super.key, required this.sizes, this.onChangeSize});
+  const SizeSelector({
+    super.key,
+    this.sizes = const [],
+    this.onChangeSize,
+    this.backgroundColor = Colors.indigo,
+  });
 
   final List<String> sizes;
   final void Function(String)? onChangeSize;
+  final Color? backgroundColor;
 
   @override
   State<SizeSelector> createState() => _SizeSelectorState();
@@ -36,11 +41,12 @@ class _SizeSelectorState extends State<SizeSelector> {
           },
           child: Container(
             decoration: BoxDecoration(
-              color: _selectedSize == size ? AppColors.themeColor : null,
+              color: _selectedSize == size ? widget.backgroundColor : null,
               shape: BoxShape.circle,
               border: Border.all(
-                color:
-                    _selectedSize == size ? AppColors.themeColor : Colors.black,
+                color: _selectedSize == size
+                    ? widget.backgroundColor!
+                    : Colors.black,
               ),
             ),
             width: 28,

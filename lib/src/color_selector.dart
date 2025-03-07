@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:product_size_color_selector/src/app_colors.dart';
 
 class ColorSelector extends StatefulWidget {
   const ColorSelector({
     super.key,
     this.colors = const ["Green", "Red", "Blue", "Yellow"],
     this.onChangeColor,
+    this.borderAndIconColor = Colors.indigo,
   });
 
   final List<String> colors;
+  final Color borderAndIconColor;
   final void Function(String)? onChangeColor;
 
   @override
@@ -22,11 +23,9 @@ class _ColorSelectorState extends State<ColorSelector> {
   @override
   void initState() {
     for (String color in widget.colors) {
-      _colors[color] = AppColors.colors[color] ?? Colors.black;
+      _colors[color] = _colorsMap[color] ?? Colors.black;
     }
-    _selectedColor = widget.colors.isNotEmpty
-        ? _colors[widget.colors.first] ?? AppColors.themeColor
-        : AppColors.themeColor;
+    _selectedColor = _colors[widget.colors.first] ?? Colors.indigo;
     super.initState();
   }
 
@@ -44,7 +43,7 @@ class _ColorSelectorState extends State<ColorSelector> {
           shape: BoxShape.circle,
           border: Border.all(
             color: entry.value == Colors.white
-                ? AppColors.themeColor
+                ? widget.borderAndIconColor
                 : Colors.transparent,
             // : _selectedColor == entry.value
             //     ? Colors.black
@@ -59,7 +58,7 @@ class _ColorSelectorState extends State<ColorSelector> {
           color: _selectedColor != entry.value
               ? Colors.transparent
               : entry.value == Colors.white
-                  ? AppColors.themeColor
+                  ? widget.borderAndIconColor
                   : Colors.white,
         ),
       ),
@@ -73,4 +72,30 @@ class _ColorSelectorState extends State<ColorSelector> {
       children: _colors.entries.map(_buildColorCircle).toList(),
     );
   }
+
+  final Map<String, Color> _colorsMap = {
+    "Red": Colors.red,
+    "Blue": Colors.blue,
+    "Green": Colors.green,
+    "Yellow": Colors.yellow,
+    "Orange": Colors.orange,
+    "Gold": Colors.amber,
+    "Purple": Colors.purple,
+    "Pink": Colors.pink,
+    "Brown": Colors.brown,
+    "Grey": Colors.grey,
+    "Black": Colors.black,
+    "White": Colors.white,
+    "Cyan": Colors.cyan,
+    "Teal": Colors.teal,
+    "Indigo": Colors.indigo,
+    "Lime": Colors.lime,
+    "Amber": Colors.amber,
+    "DeepOrange": Colors.deepOrange,
+    "DeepPurple": Colors.deepPurple,
+    "LightBlue": Colors.lightBlue,
+    "LightGreen": Colors.lightGreen,
+    "LightGreenAccent": Colors.lightGreenAccent,
+    "LightBlueAccent": Colors.lightBlueAccent,
+  };
 }

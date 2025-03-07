@@ -1,6 +1,6 @@
 name: product_size_color_selector
-description: This is a Flutter package that provides a user-friendly way for users to select colors and sizes. It allows users to pick from a predefined list of colors and sizes, and provides a callback mechanism to handle the selection. The package also handles edge cases like empty color and size lists gracefully.
-version: 1.0.0
+description: A Flutter package for selecting colors and sizes from predefined lists, with callbacks for selections and graceful handling of edge cases.
+version: 1.1.1
 homepage: https://github.com/mukarrom/product_size_and_color_selector_package
 repository: https://github.com/mukarrom/product_size_and_color_selector_package
 license: MIT
